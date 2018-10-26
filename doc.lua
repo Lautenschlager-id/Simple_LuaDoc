@@ -1,3 +1,16 @@
+--[[
+	Documentation Format:
+	- Starts with "Doc" and long comment
+	- ~
+		^ "Admin only"
+	- "Description"
+	- @param type
+		* type1|type2|...
+	- @param optional_type*
+	- >return_type
+	- !type
+]]
+
 local _STATIC = { }
 
 local generateFileName = function(from)
