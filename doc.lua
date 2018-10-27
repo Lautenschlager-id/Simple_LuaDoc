@@ -59,7 +59,7 @@ local generate = function(fileName, content)
 						counter = counter + 1
 
 						local optional = string.sub(param_type, -1) == '*' and #param_type > 1
-						params[counter] = ">| " .. param .. " | " .. (optional and string.sub(param_type, 1, -2) or param_type) .. " | " .. (optional and "✔" or "") .. " |"
+						params[counter] = ">| " .. param .. " | " .. string.gsub((optional and string.sub(param_type, 1, -2) or param_type), '|', "\\|") .. " | " .. (optional and "✔" or "") .. " |"
 					end
 				end)
 				if #params > 0 then
